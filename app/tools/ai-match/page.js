@@ -56,13 +56,10 @@ export default function AiMatchPage() {
       {/* Header */}
       <div className="flex items-center gap-4 border-b border-white/10 pb-6 mb-8">
         <div className="relative size-16 bg-panel border border-gold/30 rounded-md flex items-center justify-center shadow-md">
-          <Image
-            src="/static/mybratha.svg"
-            alt="MyBratha"
-            width={48}
-            height={48}
-            className="animate-pulse"
-          />
+          <svg viewBox="0 0 24 24" fill="none" className="size-10 stroke-gold text-gold animate-pulse" strokeWidth="1.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25-9 3.694-9 8.25c0 1.63.515 3.14 1.399 4.394L3.75 19.5l3.593-.898a9.123 9.123 0 004.657 1.648z" />
+            <path d="M9 10l3 2 3-2v3.5l-3-1-3 1V10z" fill="currentColor" />
+          </svg>
         </div>
         <div>
           <h1 className="text-2xl md:text-3xl font-bold font-heading uppercase tracking-wide">MyBratha AI Assistant</h1>

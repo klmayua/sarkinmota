@@ -108,6 +108,25 @@ export default function Home() {
     return () => clearInterval(slideInterval);
   }, [activeSlide]);
 
+  const triggerBotReply = (userMsg) => {
+    setIsTyping(true);
+    setTimeout(() => {
+      let aiText = "Welcome, My Bratha! We get correct luxury rides inside our Abuja showroom. You fit view our electric vehicles like the Xiaomi YU7 or AMG GLE 63S.";
+      const lower = userMsg.toLowerCase();
+      if (lower.includes("custom") || lower.includes("duty")) {
+        aiText = "Duty clearing na my specialty! Use our Customs Estimator to calculate Apapa or Tin Can rates. Or make I connect you to our verified agents?";
+      } else if (lower.includes("price") || lower.includes("cost")) {
+        aiText = "Standard pricing is listed inside each vehicle profile. You fit call Alamin Sarkinmota directly or submit an inquiry for custom VIP discounts.";
+      } else if (lower.includes("suv") || lower.includes("stock")) {
+        aiText = "We get high-performance luxury SUVs in stock: AMG GLE 63S, Range Rover, and even the new Xiaomi YU7 electric SUV! View them in our catalog.";
+      } else if (lower.includes("alamin") || lower.includes("agent") || lower.includes("contact")) {
+        aiText = "You fit reach Alamin Sarkinmota directly via WhatsApp or email on our Contact Us page. Let's arrange a physical viewing in our Abuja showroom.";
+      }
+      setChatMessages((prev) => [...prev, { role: "ai", content: aiText }]);
+      setIsTyping(false);
+    }, 1000);
+  };
+
   const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!chatInput.trim()) return;
@@ -115,19 +134,12 @@ export default function Home() {
     const userMsg = chatInput;
     setChatMessages((prev) => [...prev, { role: "user", content: userMsg }]);
     setChatInput("");
-    setIsTyping(true);
+    triggerBotReply(userMsg);
+  };
 
-    // Dynamic mock responses (to be hooked to live LLM in Phase 3)
-    setTimeout(() => {
-      let aiText = "My Bratha, we get correct luxury rides inside our Abuja showroom. You fit view our electric vehicles like the Xiaomi YU7 or AMG GLE 63S.";
-      if (userMsg.toLowerCase().includes("custom") || userMsg.toLowerCase().includes("duty")) {
-        aiText = "Duty clearing na my specialty! Use our Customs Estimator tool to calculate Apapa/Tin Can landing rates instantly. Or make I connect you to our verified agents?";
-      } else if (userMsg.toLowerCase().includes("price") || userMsg.toLowerCase().includes("cost")) {
-        aiText = "Standard retail pricing is listed inside the vehicle profile, but you fit call Alamin Sarkinmota directly or submit an inquiry for custom VIP discounts.";
-      }
-      setChatMessages((prev) => [...prev, { role: "ai", content: aiText }]);
-      setIsTyping(false);
-    }, 1200);
+  const handleSuggestionSend = (text) => {
+    setChatMessages((prev) => [...prev, { role: "user", content: text }]);
+    triggerBotReply(text);
   };
 
   return (
@@ -230,7 +242,7 @@ export default function Home() {
       <div className="fixed bottom-24 lg:bottom-6 right-4 z-[998] flex flex-col items-end">
         {/* Chat Window */}
         {isChatOpen && (
-          <div className="w-[calc(100vw-32px)] sm:w-[360px] h-[450px] sm:h-[480px] bg-[#0A0A0A] border border-gold/20 rounded-lg shadow-2xl flex flex-col mb-4 overflow-hidden animate-[fadeInUp_0.3s_ease-out]">
+          <div className="w-[calc(100vw-32px)] sm:w-[360px] h-[460px] sm:h-[490px] bg-[#0A0A0A] border border-gold/20 rounded-lg shadow-2xl flex flex-col mb-4 overflow-hidden animate-[fadeInUp_0.3s_ease-out]">
             {/* Header */}
             <div className="bg-gold text-black p-4 flex justify-between items-center font-heading font-bold">
               <div className="flex items-center gap-2">
@@ -246,7 +258,7 @@ export default function Home() {
                   key={idx}
                   className={`max-w-[80%] p-3 rounded-lg leading-relaxed ${
                     msg.role === "user"
-                      ? "bg-gold text-black self-end rounded-br-none"
+                      ? "bg-gold text-black self-end rounded-br-none ml-auto"
                       : "bg-zinc-900 text-white self-start rounded-bl-none border border-white/5"
                   }`}
                 >
@@ -259,6 +271,30 @@ export default function Home() {
                 </div>
               )}
             </div>
+            {/* Quick Suggestions */}
+            <div className="px-3 pb-2 pt-1 flex flex-wrap gap-1.5 bg-black border-t border-white/5">
+              <button
+                type="button"
+                onClick={() => handleSuggestionSend("How can I calculate customs duty?")}
+                className="bg-zinc-900 hover:bg-gold/10 border border-white/10 hover:border-gold/30 text-[9px] uppercase tracking-wider font-bold text-text-muted hover:text-gold px-2.5 py-1.5 rounded-sm transition-all cursor-pointer"
+              >
+                📊 customs duty
+              </button>
+              <button
+                type="button"
+                onClick={() => handleSuggestionSend("What luxury SUVs do you have in stock?")}
+                className="bg-zinc-900 hover:bg-gold/10 border border-white/10 hover:border-gold/30 text-[9px] uppercase tracking-wider font-bold text-text-muted hover:text-gold px-2.5 py-1.5 rounded-sm transition-all cursor-pointer"
+              >
+                🚗 luxury suvs
+              </button>
+              <button
+                type="button"
+                onClick={() => handleSuggestionSend("I want to speak with Alamin")}
+                className="bg-zinc-900 hover:bg-gold/10 border border-white/10 hover:border-gold/30 text-[9px] uppercase tracking-wider font-bold text-text-muted hover:text-gold px-2.5 py-1.5 rounded-sm transition-all cursor-pointer"
+              >
+                💬 contact agent
+              </button>
+            </div>
             {/* Input Form */}
             <form onSubmit={handleSendMessage} className="p-3 bg-black border-t border-white/5 flex gap-2">
               <input
@@ -268,25 +304,28 @@ export default function Home() {
                 placeholder="Ask in Pidgin or English..."
                 className="flex-1 bg-zinc-900 border border-white/10 rounded px-3 py-2 text-white focus:border-gold outline-none"
               />
-              <button type="submit" className="bg-gold text-black px-4 py-2 rounded font-semibold hover:bg-gold-glow">Send</button>
+              <button type="submit" className="bg-gold text-black px-4 py-2 rounded font-semibold hover:bg-gold-glow cursor-pointer">Send</button>
             </form>
           </div>
         )}
 
-        {/* Trigger Button */}
+        {/* Trigger Button with Premium Gold Crown/Message SVG Icon */}
         <button
           onClick={() => setIsChatOpen(!isChatOpen)}
-          className="size-14 bg-black border border-gold/40 rounded-md flex items-center justify-center shadow-xl hover:scale-105 transition-transform cursor-pointer relative group"
+          className="size-14 bg-black border border-gold hover:border-gold-glow rounded-md flex items-center justify-center shadow-xl hover:scale-105 transition-all cursor-pointer relative group"
           aria-label="Open Chat Guide"
         >
-          <div className="absolute inset-0 rounded-md bg-gold/10 blur group-hover:bg-gold/25 transition-all"></div>
-          <Image
-            src="/static/mybratha.svg"
-            alt="MyBratha logo"
-            width={40}
-            height={40}
-            className="z-10 animate-pulse"
-          />
+          <div className="absolute inset-0 rounded-md bg-gold/5 blur group-hover:bg-gold/15 transition-all"></div>
+          {isChatOpen ? (
+            <svg viewBox="0 0 24 24" fill="none" className="size-6 stroke-gold z-10 transition-colors group-hover:stroke-gold-glow" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg viewBox="0 0 24 24" fill="none" className="size-7 stroke-gold text-gold z-10 transition-all group-hover:text-gold-glow" strokeWidth="1.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25-9 3.694-9 8.25c0 1.63.515 3.14 1.399 4.394L3.75 19.5l3.593-.898a9.123 9.123 0 004.657 1.648z" />
+              <path d="M9 10l3 2 3-2v3.5l-3-1-3 1V10z" fill="currentColor" />
+            </svg>
+          )}
         </button>
       </div>
     </div>
