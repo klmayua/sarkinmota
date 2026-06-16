@@ -1,0 +1,429 @@
+[
+  {
+    "location": "Header Navigation",
+    "text": "Logo Image Link",
+    "href": "/",
+    "type": "Internal Link",
+    "status": 200
+  },
+  {
+    "location": "Header Navigation",
+    "text": "NEWS & EVENTS",
+    "href": "/news",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Header Navigation",
+    "text": "ABOUT",
+    "href": "/about",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Header Navigation",
+    "text": "CONTACT US",
+    "href": "/contact",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (VEHICLES)",
+    "text": "Browse All Vehicles",
+    "href": "/vehicles",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (VEHICLES)",
+    "text": "Executive Class Cars",
+    "href": "/cars/executive",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (VEHICLES)",
+    "text": "Sport & Performance",
+    "href": "/cars/sport",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (VEHICLES)",
+    "text": "Luxury SUVs",
+    "href": "/cars/suvs",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (VEHICLES)",
+    "text": "Electric Vehicles",
+    "href": "/cars/electric",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (VEHICLES)",
+    "text": "Daily Luxury",
+    "href": "/cars/daily",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (VEHICLES)",
+    "text": "Power Bikes",
+    "href": "/bikes",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (VEHICLES)",
+    "text": "Vans & Buses",
+    "href": "/buses",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (OWNERSHIP TOOLS)",
+    "text": "AI Car Match",
+    "href": "/tools/ai-match",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (OWNERSHIP TOOLS)",
+    "text": "Loan Calculator",
+    "href": "/tools/calculator",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (OWNERSHIP TOOLS)",
+    "text": "Compare Vehicles",
+    "href": "/tools/compare",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (OWNERSHIP TOOLS)",
+    "text": "Value Estimator",
+    "href": "/tools/valuation",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (OWNERSHIP TOOLS)",
+    "text": "Car History Check",
+    "href": "/tools/history",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (OWNERSHIP TOOLS)",
+    "text": "Customs Duty Estimator",
+    "href": "/tools/estimator",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (SARKIN MOTA NETWORK)",
+    "text": "Auto Brokers",
+    "href": "/network/brokers",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (SARKIN MOTA NETWORK)",
+    "text": "Customs Specialists",
+    "href": "/network/customs",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (SARKIN MOTA NETWORK)",
+    "text": "Inspections & Valuers",
+    "href": "/network/experts",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (SARKIN MOTA NETWORK)",
+    "text": "VIP Concierge",
+    "href": "/network/concierge",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (SARKIN MOTA NETWORK)",
+    "text": "Exclusive Supercar Clubs",
+    "href": "/network/clubs",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (SARKIN MOTA NETWORK)",
+    "text": "Maintenance Technicians",
+    "href": "/network/technicians",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (SARKIN MOTA NETWORK)",
+    "text": "Dealer Partner Network",
+    "href": "/network/partner",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (SELL OR SWAP)",
+    "text": "Sell Vehicle",
+    "href": "/sell",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (SELL OR SWAP)",
+    "text": "Swap Vehicle",
+    "href": "/swap",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (SELL OR SWAP)",
+    "text": "Integrated Sell & Swap",
+    "href": "/sell-swap",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Header Dropdown (SELL OR SWAP)",
+    "text": "Dashboard",
+    "href": "/sell/dashboard",
+    "type": "Client-Side Route",
+    "status": 404
+  },
+  {
+    "location": "Hero Carousel (Xiaomi YU7 Green)",
+    "text": "Reserve Yours",
+    "href": "/vehicles/xiaomi-yu7",
+    "type": "Carousel CTA",
+    "status": 404
+  },
+  {
+    "location": "Hero Carousel (Audi R8)",
+    "text": "Experience R8",
+    "href": "/vehicles/audi-r8",
+    "type": "Carousel CTA",
+    "status": 404
+  },
+  {
+    "location": "Hero Carousel (Mercedes-AMG GLE 63S)",
+    "text": "Unleash Performance",
+    "href": "/vehicles/gle-63s",
+    "type": "Carousel CTA",
+    "status": 404
+  },
+  {
+    "location": "Hero Carousel (BMW i7)",
+    "text": "Experience Innovation",
+    "href": "/vehicles/bmw-i7",
+    "type": "Carousel CTA",
+    "status": 404
+  },
+  {
+    "location": "Hero Carousel (Tesla Cybertruck)",
+    "text": "Explore Cybertruck",
+    "href": "/vehicles/cybertruck",
+    "type": "Carousel CTA",
+    "status": 404
+  },
+  {
+    "location": "Hero Carousel (Nissan Patrol)",
+    "text": "Explore Patrol",
+    "href": "/vehicles/nissan-patrol",
+    "type": "Carousel CTA",
+    "status": 404
+  },
+  {
+    "location": "Hero Carousel (Stelato S9)",
+    "text": "Discover S9",
+    "href": "/vehicles/stelato-s9",
+    "type": "Carousel CTA",
+    "status": 404
+  },
+  {
+    "location": "Hero Carousel (Xiaomi YU7 Blue)",
+    "text": "Get Details",
+    "href": "/vehicles/xiaomi-yu7",
+    "type": "Carousel CTA",
+    "status": 404
+  },
+  {
+    "location": "Hero Carousel (Flagship Video)",
+    "text": "Contact Us",
+    "href": "/contact",
+    "type": "Carousel CTA",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Contact Us",
+    "href": "/contact",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Executive Class",
+    "href": "/cars/executive",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Sport & Performance",
+    "href": "/cars/sport",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Premium SUVs",
+    "href": "/cars/suvs",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Electric Vehicles",
+    "href": "/cars/electric",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Power Bikes",
+    "href": "/bikes",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Executive Buses",
+    "href": "/buses",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "AI Car Match",
+    "href": "/tools/ai-match",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Loan Calculator",
+    "href": "/tools/calculator",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Compare Cars",
+    "href": "/tools/compare",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Auto Brokers",
+    "href": "/network/brokers",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Customs Specialists",
+    "href": "/network/customs",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Sell or Swap",
+    "href": "/sell-swap",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "News & Events",
+    "href": "/news",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "About Us",
+    "href": "/about",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Careers",
+    "href": "/careers",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Contact",
+    "href": "/contact",
+    "type": "Internal Link",
+    "status": 404
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Footer Image Link",
+    "href": "https://twitter.com",
+    "type": "External Link",
+    "status": 200
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Footer Image Link",
+    "href": "https://youtube.com",
+    "type": "External Link",
+    "status": 200
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Footer Image Link",
+    "href": "https://facebook.com",
+    "type": "External Link",
+    "status": 400
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Footer Image Link",
+    "href": "https://tiktok.com",
+    "type": "External Link",
+    "status": 200
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "Footer Image Link",
+    "href": "https://instagram.com",
+    "type": "External Link",
+    "status": 200
+  },
+  {
+    "location": "Footer Navigation",
+    "text": "WeAreQuest",
+    "href": "#",
+    "type": "Internal Link",
+    "status": "ERR_TIMEOUT"
+  }
+]

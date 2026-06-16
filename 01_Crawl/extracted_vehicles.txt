@@ -1,0 +1,7 @@
+/vehicles/audi-r8
+/vehicles/bmw-i7
+/vehicles/cybertruck
+/vehicles/gle-63s
+/vehicles/nissan-patrol
+/vehicles/stelato-s9
+/vehicles/xiaomi-yu7
