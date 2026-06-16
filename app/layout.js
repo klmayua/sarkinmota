@@ -18,7 +18,7 @@ export const metadata = {
   title: "Sarkin Mota Autos | Premium Luxury Vehicles",
   description: "Nigeria's premier luxury vehicle marketplace and care ecosystem, located in Central Business District, Abuja.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/sarkin_mota_favicon.png",
   },
 };
 
