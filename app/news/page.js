@@ -44,25 +44,7 @@ const newsArticles = [
 export default function NewsPage() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col justify-between">
-      {/* Header Navigation */}
-      <header className="border-b border-white/10 bg-black/50 backdrop-blur-md">
-        <nav className="max-w-7xl mx-auto h-[108px] flex justify-between items-center px-6 lg:px-12">
-          <a href="/" className="relative w-28 h-16 flex items-center">
-            <Image
-              src="/static/brand-logo-light.webp"
-              alt="SarkinMota Logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </a>
-          <div className="flex gap-x-6 items-center">
-            <a href="/vehicles" className="text-xs uppercase tracking-wider text-white hover:text-gold transition-colors font-medium">Showroom</a>
-            <a href="/tools" className="text-xs uppercase tracking-wider text-white hover:text-gold transition-colors font-medium">Tools</a>
-            <a href="/sell-swap" className="text-xs uppercase tracking-wider text-white hover:text-gold transition-colors font-medium">Sell / Swap</a>
-          </div>
-        </nav>
-      </header>
+
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-16 flex-1 w-full">
@@ -145,10 +127,7 @@ export default function NewsPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[#060606] border-t border-white/5 py-8 text-center text-xs text-text-muted">
-        <p>© SARKIN MOTA AUTOS 2026</p>
-      </footer>
+
     </div>
   );
 }

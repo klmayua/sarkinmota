@@ -1,5 +1,7 @@
 import { Titillium_Web, Inter } from "next/font/google";
 import "./globals.css";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const titilliumWeb = Titillium_Web({
   variable: "--font-titillium-web",
@@ -27,7 +29,11 @@ export default function RootLayout({ children }) {
       className={`${titilliumWeb.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-black text-white selection:bg-gold selection:text-black">
-        {children}
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

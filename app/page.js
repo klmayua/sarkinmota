@@ -80,7 +80,7 @@ const slidesData = [
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [chatInput, setChatInput] = useState("");
   const [isLoaderVisible, setIsLoaderVisible] = useState(true);
@@ -148,48 +148,7 @@ export default function Home() {
         </div>
       )}
 
-      {/* 2. HEADER NAVIGATION */}
-      <header className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/80 to-transparent">
-        <nav className="max-w-7xl mx-auto h-[108px] grid grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-12 border-b border-white/10">
-          {/* Left: Hamburger + Primary links */}
-          <div className="flex gap-x-6 items-center">
-            <button
-              onClick={() => setIsMenuOpen(true)}
-              className="size-10 border border-white/10 hover:border-gold/50 rounded-md flex items-center justify-center transition-all bg-black/40 backdrop-blur-sm"
-              aria-label="Open Menu"
-            >
-              <svg viewBox="0 0 24 24" fill="none" className="size-6 stroke-white" strokeWidth="2">
-                <line x1="4" y1="6" x2="20" y2="6" strokeLinecap="round" />
-                <line x1="4" y1="12" x2="20" y2="12" strokeLinecap="round" />
-                <line x1="4" y1="18" x2="16" y2="18" strokeLinecap="round" />
-              </svg>
-            </button>
-            <div className="hidden lg:flex gap-x-6">
-              <a href="/vehicles" className="text-xs uppercase tracking-wider text-white hover:text-gold transition-colors font-medium">Vehicles</a>
-              <a href="/tools" className="text-xs uppercase tracking-wider text-white hover:text-gold transition-colors font-medium">Ownership Tools</a>
-              <a href="/network" className="text-xs uppercase tracking-wider text-white hover:text-gold transition-colors font-medium">Sarkin Mota Network</a>
-            </div>
-          </div>
 
-          {/* Center: Logo */}
-          <a href="/" className="relative w-28 h-16 flex items-center">
-            <Image
-              src="/static/brand-logo-light.webp"
-              alt="SarkinMota Logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </a>
-
-          {/* Right: Actions */}
-          <div className="flex gap-x-6 justify-end items-center">
-            <a href="/sell-swap" className="hidden lg:inline-block text-xs uppercase tracking-wider text-white hover:text-gold transition-colors font-medium">Sell or Swap</a>
-            <a href="/news" className="hidden lg:inline-block text-xs uppercase tracking-wider text-white hover:text-gold transition-colors font-medium">News & Events</a>
-            <a href="/contact" className="text-xs uppercase tracking-wider bg-gold text-black px-6 py-2.5 rounded-full hover:bg-gold-glow transition-all font-semibold shadow-md shadow-gold/25">Contact Us</a>
-          </div>
-        </nav>
-      </header>
 
       {/* 3. HERO SLIDER */}
       <section className="relative w-full h-screen overflow-hidden">
@@ -265,79 +224,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. FOOTER PORTALS */}
-      <footer className="relative z-20 bg-[#060606] border-t border-white/5 pt-16 pb-8">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          <div>
-            <h3 className="text-xs uppercase tracking-widest text-gold font-heading font-semibold mb-4">Vehicles</h3>
-            <ul className="space-y-2 text-sm text-text-muted">
-              <li><a href="/cars/executive" className="hover:text-white transition-colors">Executive Class</a></li>
-              <li><a href="/cars/sport" className="hover:text-white transition-colors">Sport & Performance</a></li>
-              <li><a href="/cars/suvs" className="hover:text-white transition-colors">Premium SUVs</a></li>
-              <li><a href="/cars/electric" className="hover:text-white transition-colors">Electric Vehicles</a></li>
-              <li><a href="/bikes" className="hover:text-white transition-colors">Power Bikes</a></li>
-              <li><a href="/buses" className="hover:text-white transition-colors">Executive Buses</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xs uppercase tracking-widest text-gold font-heading font-semibold mb-4">Ownership Tools</h3>
-            <ul className="space-y-2 text-sm text-text-muted">
-              <li><a href="/tools/ai-match" className="hover:text-white transition-colors">AI Car Match</a></li>
-              <li><a href="/tools/calculator" className="hover:text-white transition-colors">Loan Calculator</a></li>
-              <li><a href="/tools/compare" className="hover:text-white transition-colors">Compare Cars</a></li>
-              <li><a href="/network/brokers" className="hover:text-white transition-colors">Auto Brokers</a></li>
-              <li><a href="/network/customs" className="hover:text-white transition-colors">Customs Specialists</a></li>
-              <li><a href="/sell-swap" className="hover:text-white transition-colors">Sell or Swap</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xs uppercase tracking-widest text-gold font-heading font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 text-sm text-text-muted">
-              <li><a href="/news" className="hover:text-white transition-colors">News & Events</a></li>
-              <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="/careers" className="hover:text-white transition-colors">Careers</a></li>
-              <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xs uppercase tracking-widest text-gold font-heading font-semibold mb-4">Social Presence</h3>
-            <div className="flex gap-4 mt-2">
-              <a href="https://x.com" className="size-10 rounded-full border border-white/10 flex items-center justify-center text-text-muted hover:border-gold hover:text-gold transition-all bg-black">X</a>
-              <a href="https://youtube.com" className="size-10 rounded-full border border-white/10 flex items-center justify-center text-text-muted hover:border-gold hover:text-gold transition-all bg-black">YT</a>
-              <a href="https://instagram.com" className="size-10 rounded-full border border-white/10 flex items-center justify-center text-text-muted hover:border-gold hover:text-gold transition-all bg-black">IG</a>
-            </div>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-6 border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between text-xs text-text-muted gap-4">
-          <p>© SARKIN MOTA AUTOS 2026</p>
-          <p>Website by <a href="#" className="hover:text-gold transition-colors font-medium">WeAreQuest</a></p>
-        </div>
-      </footer>
 
-      {/* 5. SIDEBAR NAVIGATION OVERLAY */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[999] flex justify-end">
-          <div className="w-[320px] h-full bg-[#0D0D0D] border-l border-white/10 p-6 flex flex-col gap-6 shadow-2xl relative animate-[slideLeft_0.4s_ease-out]">
-            <button
-              onClick={() => setIsMenuOpen(false)}
-              className="absolute top-6 right-6 size-8 flex items-center justify-center border border-white/10 hover:border-gold/50 rounded-md transition-all text-white/60 hover:text-white"
-              aria-label="Close Menu"
-            >
-              ✕
-            </button>
-            <div className="mt-12 flex flex-col gap-4 text-lg font-semibold uppercase tracking-wider font-heading">
-              <a href="/vehicles" className="hover:text-gold transition-colors">Showroom Catalog</a>
-              <a href="/circle" className="hover:text-gold transition-colors">Owner Circle</a>
-              <a href="/challenges" className="hover:text-gold transition-colors">Trivia & Challenges</a>
-              <a href="/services" className="hover:text-gold transition-colors">SafiMota Care</a>
-              <a href="/events" className="hover:text-gold transition-colors">Events & Shows</a>
-              <a href="/tools/calculator" className="hover:text-gold transition-colors">Loan Calculator</a>
-              <a href="/tools/compare" className="hover:text-gold transition-colors">Compare Cars</a>
-              <a href="/sell-swap" className="hover:text-gold transition-colors">Sell or Swap</a>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* 6. FLOATING CHAT WIDGET ("MyBratha" Assistant) */}
       <div className="fixed bottom-4 right-4 z-[998] flex flex-col items-end">

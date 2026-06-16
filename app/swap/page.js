@@ -68,18 +68,7 @@ export default function SwapPage() {
   if (formSubmitted) {
     return (
       <div className="min-h-screen bg-black text-white flex flex-col justify-between">
-        <header className="border-b border-white/10 bg-black/50 backdrop-blur-md">
-          <nav className="max-w-7xl mx-auto h-[108px] flex justify-between items-center px-6 lg:px-12">
-            <a href="/" className="relative w-28 h-16 flex items-center">
-              <Image
-                src="/static/brand-logo-light.webp"
-                alt="SarkinMota Logo"
-                fill
-                className="object-contain"
-              />
-            </a>
-          </nav>
-        </header>
+
 
         <main className="max-w-md mx-auto px-6 py-24 flex-1 flex flex-col justify-center text-center space-y-6">
           <div className="size-20 bg-gold/10 border border-gold rounded-full flex items-center justify-center text-gold text-4xl mx-auto animate-bounce">
@@ -106,30 +95,14 @@ export default function SwapPage() {
           </div>
         </main>
 
-        <footer className="bg-[#060606] border-t border-white/5 py-8 text-center text-xs text-text-muted">
-          <p>© SARKIN MOTA AUTOS 2026</p>
-        </footer>
+
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col justify-between">
-      <header className="border-b border-white/10 bg-black/50 backdrop-blur-md">
-        <nav className="max-w-7xl mx-auto h-[108px] flex justify-between items-center px-6 lg:px-12">
-          <a href="/" className="relative w-28 h-16 flex items-center">
-            <Image
-              src="/static/brand-logo-light.webp"
-              alt="SarkinMota Logo"
-              fill
-              className="object-contain"
-            />
-          </a>
-          <a href="/sell-swap" className="text-xs uppercase tracking-wider text-text-muted hover:text-white transition-colors">
-            ← Back
-          </a>
-        </nav>
-      </header>
+
 
       <main className="max-w-3xl mx-auto px-6 py-16 flex-1 w-full">
         <nav className="text-xs text-text-muted mb-4 uppercase tracking-wider">
@@ -322,9 +295,7 @@ export default function SwapPage() {
         </form>
       </main>
 
-      <footer className="bg-[#060606] border-t border-white/5 py-8 text-center text-xs text-text-muted">
-        <p>© SARKIN MOTA AUTOS 2026</p>
-      </footer>
+
     </div>
   );
 }
