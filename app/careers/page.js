@@ -108,7 +108,7 @@ export default function CareersPage() {
           <div className="bg-panel border border-white/10 rounded-md p-8 shadow-xl">
             {formSubmitted ? (
               <div className="text-center py-20 space-y-4">
-                <div className="size-16 bg-gold/10 border border-gold rounded-full flex items-center justify-center text-gold mx-auto text-2xl">✓</div>
+                <div className="size-16 bg-gold/10 border border-gold rounded-md flex items-center justify-center text-gold mx-auto text-2xl">✓</div>
                 <h3 className="text-xl font-bold font-heading uppercase">Application Received</h3>
                 <p className="text-xs text-text-muted">Excellent. Our human resource operations team will review your credentials and portfolio links for the <span className="text-white font-semibold">{currentJob?.title}</span> position.</p>
               </div>

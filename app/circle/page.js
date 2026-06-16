@@ -108,7 +108,7 @@ export default function CarCircle() {
           {/* Post Creation Box */}
           <form onSubmit={handleCreatePost} className="bg-panel border border-white/10 rounded-md p-6 space-y-4 shadow-xl">
             <div className="flex gap-4 items-start">
-              <div className="relative size-10 rounded-full border border-gold/30 bg-black overflow-hidden flex-shrink-0">
+              <div className="relative size-10 rounded-md border border-gold/30 bg-black overflow-hidden flex-shrink-0">
                 <Image src="/static/mybratha.svg" alt="Avatar" fill className="object-contain" />
               </div>
               <textarea
@@ -136,7 +136,7 @@ export default function CarCircle() {
                 {/* Post Header */}
                 <div className="flex justify-between items-start">
                   <div className="flex gap-3 items-center">
-                    <div className="relative size-10 rounded-full border border-gold/20 bg-black overflow-hidden flex-shrink-0">
+                    <div className="relative size-10 rounded-md border border-gold/20 bg-black overflow-hidden flex-shrink-0">
                       <Image src={post.author.avatar} alt={post.author.name} fill className="object-contain" />
                     </div>
                     <div>

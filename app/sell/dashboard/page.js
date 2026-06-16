@@ -147,7 +147,7 @@ export default function SellerDashboard() {
 
         <div className="pt-8 border-t border-white/5 space-y-4">
           <div className="flex items-center gap-3">
-            <div className="size-10 bg-zinc-800 rounded-full flex items-center justify-center font-bold text-gold">U</div>
+            <div className="size-10 bg-zinc-800 rounded-md flex items-center justify-center font-bold text-gold">U</div>
             <div>
               <p className="text-xs font-semibold text-white">Abuja Member</p>
               <p className="text-[10px] text-text-muted">member@sarkinmota.ng</p>

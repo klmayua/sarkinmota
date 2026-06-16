@@ -55,7 +55,7 @@ export default function AiMatchPage() {
 
       {/* Header */}
       <div className="flex items-center gap-4 border-b border-white/10 pb-6 mb-8">
-        <div className="relative size-16 bg-panel border border-gold/30 rounded-full flex items-center justify-center shadow-md">
+        <div className="relative size-16 bg-panel border border-gold/30 rounded-md flex items-center justify-center shadow-md">
           <Image
             src="/static/mybratha.svg"
             alt="MyBratha"

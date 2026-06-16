@@ -159,7 +159,7 @@ export default function ChallengesPortal() {
                         : "bg-black/40 border-white/10 hover:border-gold/50 text-text-muted hover:text-white"
                     }`}
                   >
-                    <span className={`size-6 rounded-full border text-xs font-bold flex items-center justify-center ${
+                    <span className={`size-6 rounded-sm border text-xs font-bold flex items-center justify-center ${
                       selectedAnswer === opt.key ? "bg-gold text-black border-gold" : "border-white/20 text-white"
                     }`}>
                       {opt.key}
@@ -245,7 +245,7 @@ export default function ChallengesPortal() {
                   user.username === "abuja_fan_99" ? "bg-gold/10 border border-gold/20" : ""
                 }`}>
                   <div className="flex items-center gap-3">
-                    <span className={`font-mono text-xs font-bold size-5 flex items-center justify-center rounded-full ${
+                    <span className={`font-mono text-xs font-bold size-5 flex items-center justify-center rounded-sm ${
                       user.rank === 1 ? "bg-gold text-black" : "text-text-muted"
                     }`}>
                       #{user.rank}

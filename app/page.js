@@ -276,10 +276,10 @@ export default function Home() {
         {/* Trigger Button */}
         <button
           onClick={() => setIsChatOpen(!isChatOpen)}
-          className="size-14 bg-black border border-gold/40 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform cursor-pointer relative group"
+          className="size-14 bg-black border border-gold/40 rounded-md flex items-center justify-center shadow-xl hover:scale-105 transition-transform cursor-pointer relative group"
           aria-label="Open Chat Guide"
         >
-          <div className="absolute inset-0 rounded-full bg-gold/10 blur group-hover:bg-gold/25 transition-all"></div>
+          <div className="absolute inset-0 rounded-md bg-gold/10 blur group-hover:bg-gold/25 transition-all"></div>
           <Image
             src="/static/mybratha.svg"
             alt="MyBratha logo"

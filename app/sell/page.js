@@ -64,7 +64,7 @@ export default function SellPage() {
 
 
         <main className="max-w-md mx-auto px-6 py-24 flex-1 flex flex-col justify-center text-center space-y-6">
-          <div className="size-20 bg-gold/10 border border-gold rounded-full flex items-center justify-center text-gold text-4xl mx-auto animate-bounce">
+          <div className="size-20 bg-gold/10 border border-gold rounded-md flex items-center justify-center text-gold text-4xl mx-auto animate-bounce">
             ✓
           </div>
           <h1 className="text-3xl font-bold font-heading uppercase tracking-wide">Listing Submitted</h1>

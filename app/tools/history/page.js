@@ -92,7 +92,7 @@ export default function VinHistoryPage() {
               <p className="text-xs text-text-muted">Performing forensic background audit...</p>
             </div>
 
-            <div className="w-full bg-black h-1.5 rounded-full overflow-hidden">
+            <div className="w-full bg-black h-1.5 rounded-sm overflow-hidden">
               <div
                 className="bg-gold h-full transition-all duration-300"
                 style={{ width: `${progress}%` }}

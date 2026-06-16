@@ -94,7 +94,7 @@ export default function ContactPage() {
           <div className="bg-panel border border-white/10 rounded-md p-8 shadow-xl">
             {submitted ? (
               <div className="text-center py-20 space-y-4">
-                <div className="size-16 bg-gold/10 border border-gold rounded-full flex items-center justify-center text-gold mx-auto text-2xl">✓</div>
+                <div className="size-16 bg-gold/10 border border-gold rounded-md flex items-center justify-center text-gold mx-auto text-2xl">✓</div>
                 <h3 className="text-xl font-bold font-heading uppercase">Message Sent</h3>
                 <p className="text-xs text-text-muted">Thank you, {formState.name}. Our showroom representative will respond to your email within 2 hours.</p>
               </div>
