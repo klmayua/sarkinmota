@@ -98,9 +98,9 @@ export default function Header() {
       <div className="fixed top-4 left-4 right-4 flex justify-center lg:hidden z-50 pointer-events-none">
         <a 
           href="/" 
-          className="bg-black/60 backdrop-blur-md border border-white/10 rounded-md py-2 px-6 pointer-events-auto shadow-lg flex items-center justify-center h-[52px]"
+          className="bg-black/60 backdrop-blur-md border border-white/10 rounded-md py-2 px-6 pointer-events-auto shadow-lg flex items-center justify-center h-[56px] w-[160px]"
         >
-          <div className="relative w-20 h-8">
+          <div className="relative w-28 h-10">
             <Image
               src="/static/brand-logo-light.webp"
               alt="SarkinMota Logo"
@@ -114,7 +114,7 @@ export default function Header() {
 
       {/* Floating Desktop Header (Fixed viewport navigation) */}
       <header className={`hidden lg:block fixed top-4 left-4 right-4 z-50 transition-all duration-300 pointer-events-none`}>
-        <nav className="max-w-8xl mx-auto h-[80px] flex justify-between items-center px-6 lg:px-10 bg-black/80 backdrop-blur-md border border-white/10 rounded-md shadow-2xl pointer-events-auto">
+        <nav className="relative max-w-8xl mx-auto h-[80px] flex justify-between items-center px-6 lg:px-10 bg-black/80 backdrop-blur-md border border-white/10 rounded-md shadow-2xl pointer-events-auto">
           
           {/* Left Links Group */}
           <div className="flex gap-x-8 items-center h-full">
@@ -171,16 +171,18 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Center Logo */}
-          <a href="/" className="relative w-24 h-12 flex items-center justify-center">
-            <Image
-              src="/static/brand-logo-light.webp"
-              alt="SarkinMota Logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </a>
+          {/* Center Logo - Absolutely Centered */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-auto">
+            <a href="/" className="relative w-32 h-14 flex items-center justify-center">
+              <Image
+                src="/static/brand-logo-light.webp"
+                alt="SarkinMota Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </a>
+          </div>
 
           {/* Right Links Group */}
           <div className="flex gap-x-6 items-center h-full justify-end">

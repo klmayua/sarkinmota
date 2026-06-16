@@ -227,10 +227,10 @@ export default function Home() {
 
 
       {/* 6. FLOATING CHAT WIDGET ("MyBratha" Assistant) */}
-      <div className="fixed bottom-4 right-4 z-[998] flex flex-col items-end">
+      <div className="fixed bottom-24 lg:bottom-6 right-4 z-[998] flex flex-col items-end">
         {/* Chat Window */}
         {isChatOpen && (
-          <div className="w-[360px] h-[480px] bg-[#0A0A0A] border border-gold/20 rounded-lg shadow-2xl flex flex-col mb-4 overflow-hidden animate-[fadeInUp_0.3s_ease-out]">
+          <div className="w-[calc(100vw-32px)] sm:w-[360px] h-[450px] sm:h-[480px] bg-[#0A0A0A] border border-gold/20 rounded-lg shadow-2xl flex flex-col mb-4 overflow-hidden animate-[fadeInUp_0.3s_ease-out]">
             {/* Header */}
             <div className="bg-gold text-black p-4 flex justify-between items-center font-heading font-bold">
               <div className="flex items-center gap-2">
