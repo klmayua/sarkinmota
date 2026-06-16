@@ -215,7 +215,7 @@ export default function VehicleDetail() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white py-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+    <div className="min-h-screen bg-black text-white py-24 px-6 md:px-12 lg:px-20 max-w-8xl mx-auto">
       {/* Breadcrumbs */}
       <nav className="text-xs text-text-muted mb-4 uppercase tracking-wider">
         <a href="/" className="hover:text-gold transition-colors">Home</a> / <a href="/vehicles" className="hover:text-gold transition-colors">Vehicles</a> / <span className="text-gold">{car.brand} {car.model}</span>

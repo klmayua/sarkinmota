@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-const navLinks = [
+const leftLinks = [
   {
     name: "Vehicles",
     hasDropdown: true,
@@ -58,7 +58,10 @@ const navLinks = [
         { name: "Dealer Partner Network", href: "/network/partner", desc: "Affiliated dealer profiles" }
       ]
     ]
-  },
+  }
+];
+
+const rightLinks = [
   {
     name: "Sell or Swap",
     hasDropdown: true,
@@ -82,7 +85,6 @@ export default function Header() {
   const [activeMobileTab, setActiveMobileTab] = useState(null);
   const pathname = usePathname();
 
-  // Close menu on route changes
   useEffect(() => {
     setIsMenuOpen(false);
     setActiveMobileTab(null);
@@ -91,10 +93,10 @@ export default function Header() {
   const isHome = pathname === "/";
 
   return (
-    <header className={`${isHome ? "absolute top-0 left-0 right-0" : "sticky top-0 bg-[#060606] border-b border-white/10"} z-50 transition-all duration-300`}>
-      <nav className="max-w-7xl mx-auto h-[108px] grid grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-12 border-b border-white/5 lg:border-white/10">
+    <header className={`${isHome ? "absolute top-0 left-0 right-0" : "sticky top-0 bg-[#060606]"} z-50 transition-all duration-300`}>
+      <nav className="max-w-8xl mx-auto h-[108px] flex justify-between items-center px-6 md:px-12 lg:px-20 border-b border-white/10">
         
-        {/* Left: Hamburger + Dropdowns */}
+        {/* Left Links Group */}
         <div className="flex gap-x-8 items-center h-full">
           <button
             onClick={() => setIsMenuOpen(true)}
@@ -108,19 +110,18 @@ export default function Header() {
             </svg>
           </button>
 
-          {/* Desktop Nav Items with Hover Dropdowns */}
           <div className="hidden lg:flex gap-x-6 h-full items-center">
-            {navLinks.map((link) => (
+            {leftLinks.map((link) => (
               <div key={link.name} className="relative group py-10 h-full flex items-center">
-                <button className="text-[11px] uppercase tracking-wider text-white hover:text-gold transition-colors font-semibold flex items-center gap-1 cursor-pointer">
+                <button className="text-[11px] uppercase tracking-wider text-white group-hover:text-gold transition-colors font-semibold flex items-center gap-1 cursor-pointer">
                   {link.name}
                   <svg className="size-2.5 stroke-white group-hover:stroke-gold transition-colors" fill="none" viewBox="0 0 24 24" strokeWidth="3">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                   </svg>
                 </button>
 
-                {/* Hover Dropdown Box */}
-                <div className={`absolute top-[90%] ${link.alignRight ? "right-0" : "left-0"} w-[520px] bg-black/95 border border-white/10 rounded-md p-6 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 backdrop-blur-md z-[100]`}>
+                {/* Dropdown panel */}
+                <div className="absolute top-[90%] left-0 w-[520px] bg-black/95 border border-white/10 rounded-md p-6 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 backdrop-blur-md z-[100]">
                   <div className="text-[9px] text-gold uppercase tracking-widest font-heading font-bold mb-4 border-b border-white/10 pb-2">
                     {link.dropdownTitle}
                   </div>
@@ -150,7 +151,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Center: Logo */}
+        {/* Center Logo */}
         <a href="/" className="relative w-28 h-16 flex items-center justify-center">
           <Image
             src="/static/brand-logo-light.webp"
@@ -161,20 +162,61 @@ export default function Header() {
           />
         </a>
 
-        {/* Right: Actions */}
-        <div className="flex gap-x-6 justify-end items-center">
-          <a
-            href="/news"
-            className="hidden lg:inline-block text-[11px] uppercase tracking-wider text-white hover:text-gold transition-colors font-semibold"
-          >
-            News & Events
-          </a>
-          <a
-            href="/about"
-            className="hidden lg:inline-block text-[11px] uppercase tracking-wider text-white hover:text-gold transition-colors font-semibold"
-          >
-            About
-          </a>
+        {/* Right Links Group */}
+        <div className="flex gap-x-6 items-center h-full justify-end">
+          <div className="hidden lg:flex gap-x-6 h-full items-center">
+            {rightLinks.map((link) => (
+              <div key={link.name} className="relative group py-10 h-full flex items-center">
+                <button className="text-[11px] uppercase tracking-wider text-white group-hover:text-gold transition-colors font-semibold flex items-center gap-1 cursor-pointer">
+                  {link.name}
+                  <svg className="size-2.5 stroke-white group-hover:stroke-gold transition-colors" fill="none" viewBox="0 0 24 24" strokeWidth="3">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </button>
+
+                {/* Dropdown panel */}
+                <div className="absolute top-[90%] right-0 w-[520px] bg-black/95 border border-white/10 rounded-md p-6 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 backdrop-blur-md z-[100]">
+                  <div className="text-[9px] text-gold uppercase tracking-widest font-heading font-bold mb-4 border-b border-white/10 pb-2">
+                    {link.dropdownTitle}
+                  </div>
+                  <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                    {link.cols.map((col, colIdx) => (
+                      <div key={colIdx} className="space-y-3">
+                        {col.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            className="block p-2.5 rounded hover:bg-white/5 group/item transition-colors"
+                          >
+                            <p className="text-[11px] font-bold text-white uppercase tracking-tight group-hover/item:text-gold transition-colors">
+                              {item.name}
+                            </p>
+                            <p className="text-[10px] text-text-muted mt-1 leading-normal font-medium">
+                              {item.desc}
+                            </p>
+                          </a>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+            
+            <a
+              href="/news"
+              className="text-[11px] uppercase tracking-wider text-white hover:text-gold transition-colors font-semibold"
+            >
+              News & Events
+            </a>
+            <a
+              href="/about"
+              className="text-[11px] uppercase tracking-wider text-white hover:text-gold transition-colors font-semibold"
+            >
+              About
+            </a>
+          </div>
+          
           <a
             href="/contact"
             className="text-[11px] uppercase tracking-wider bg-gold text-black px-6 py-3 rounded-full hover:bg-gold-glow transition-all font-bold shadow-md shadow-gold/25 cursor-pointer"
@@ -184,13 +226,11 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Mobile Sidebar Menu (Drawer overlay matching screenshot style) */}
+      {/* Mobile Drawer (Accordion list) */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[9999] flex justify-start">
           <div className="w-[320px] h-full bg-white text-black p-6 flex flex-col justify-between shadow-2xl relative animate-[slideRight_0.3s_ease-out]">
-            
             <div>
-              {/* Close Button */}
               <div className="flex justify-between items-center mb-10">
                 <button
                   onClick={() => setIsMenuOpen(false)}
@@ -202,9 +242,8 @@ export default function Header() {
                 <span className="text-[10px] uppercase tracking-widest font-heading font-black text-gold">SARKIN MOTA</span>
               </div>
 
-              {/* Mobile Navigation List */}
               <div className="flex flex-col gap-5 text-sm font-bold uppercase tracking-wider font-heading">
-                {navLinks.map((link, idx) => (
+                {[...leftLinks, ...rightLinks].map((link, idx) => (
                   <div key={link.name} className="border-b border-black/5 pb-2">
                     <button
                       onClick={() => setActiveMobileTab(activeMobileTab === idx ? null : idx)}
@@ -213,7 +252,6 @@ export default function Header() {
                       <span>{link.name}</span>
                       <span>{activeMobileTab === idx ? "−" : "+"}</span>
                     </button>
-                    
                     {activeMobileTab === idx && (
                       <div className="mt-3 pl-4 flex flex-col gap-2.5 lowercase">
                         {link.cols.flat().map((sub) => (
@@ -230,14 +268,12 @@ export default function Header() {
                   </div>
                 ))}
 
-                {/* News & Events in mobile list */}
                 <a href="/news" className="hover:text-gold transition-colors text-black font-black border-b border-black/5 pb-2">
                   News & Events
                 </a>
               </div>
             </div>
 
-            {/* Bottom Section (About Us, Careers, Contact) */}
             <div className="border-t border-black/10 pt-6 flex flex-col gap-3 text-xs font-semibold text-zinc-500">
               <a href="/about" className="hover:text-gold transition-colors">About Us</a>
               <a href="/careers" className="hover:text-gold transition-colors">Careers</a>
@@ -246,7 +282,6 @@ export default function Header() {
                 © SARKIN MOTA AUTOS 2026
               </div>
             </div>
-
           </div>
         </div>
       )}

@@ -149,7 +149,7 @@ export default function Catalog() {
     });
 
   return (
-    <div className="min-h-screen bg-black text-white py-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+    <div className="min-h-screen bg-black text-white py-24 px-6 md:px-12 lg:px-20 max-w-8xl mx-auto">
       {/* Header & Breadcrumbs */}
       <nav className="text-xs text-text-muted mb-4 uppercase tracking-wider">
         <a href="/" className="hover:text-gold transition-colors">Home</a> / <span className="text-gold">Vehicles</span>

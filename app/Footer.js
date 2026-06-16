@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="relative z-20 bg-[#060606] border-t border-white/5 pt-20 pb-8 mt-auto">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+      <div className="max-w-8xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
         
         {/* Col 1: Vehicles */}
         <div>
@@ -75,7 +75,7 @@ export default function Footer() {
 
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between text-[10px] text-text-muted gap-4">
+      <div className="max-w-8xl mx-auto px-6 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between text-[10px] text-text-muted gap-4">
         <p>© SARKIN MOTA AUTOS 2026. ALL RIGHTS RESERVED.</p>
         <p>Website by <a href="#" className="hover:text-gold transition-colors font-semibold">WeAreQuest</a></p>
       </div>

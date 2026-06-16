@@ -63,7 +63,7 @@ export default function MemberDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white py-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+    <div className="min-h-screen bg-black text-white py-24 px-6 md:px-12 lg:px-20 max-w-8xl mx-auto">
       {/* Header */}
       <h1 className="text-4xl md:text-5xl font-bold font-heading mb-12 uppercase tracking-wide border-b border-white/10 pb-4">
         Member Dashboard

@@ -47,7 +47,7 @@ export default function NewsPage() {
 
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 py-16 flex-1 w-full">
+      <main className="max-w-8xl mx-auto px-6 py-16 flex-1 w-full">
         {/* Breadcrumbs */}
         <nav className="text-xs text-text-muted mb-4 uppercase tracking-wider">
           <a href="/" className="hover:text-gold transition-colors">Home</a> / <span className="text-gold">News & Events</span>
